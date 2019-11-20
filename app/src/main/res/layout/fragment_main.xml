@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".fragments.MainFragment">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter amount to deals"
+        android:gravity="center"
+        android:id="@+id/editTextAmount"/>
+
     <Button
         android:id="@+id/deals"
         android:layout_width="match_parent"

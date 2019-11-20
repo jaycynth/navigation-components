@@ -11,12 +11,20 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_dealsFragment2"
-            app:destination="@id/dealsFragment2"
+            android:id="@+id/action_mainFragment_to_dealsFragment"
+
+            app:destination="@id/dealsFragment"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left">
+
+            <argument
+                android:name="myArg"
+                app:argType="integer"
+                android:defaultValue="1" />
+
+        </action>
         <action
             android:id="@+id/action_mainFragment_to_ordersFragment"
             app:destination="@id/ordersFragment"
@@ -47,10 +55,17 @@
             app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
-        android:id="@+id/dealsFragment2"
+        android:id="@+id/dealsFragment"
         android:name="com.julie.learnnavigationcomponents.fragments.DealsFragment"
         android:label="fragment_deals"
-        tools:layout="@layout/fragment_deals" />
+        tools:layout="@layout/fragment_deals">
+
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="1" />
+
+    </fragment>
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.julie.learnnavigationcomponents.fragments.LocationFragment"
