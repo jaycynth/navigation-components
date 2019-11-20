@@ -45,7 +45,17 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left">
+
+            <argument
+                android:name="amount"
+                app:argType="integer"
+                android:defaultValue="1" />
+
+        </action>
+
+
+
         <action
             android:id="@+id/action_mainFragment_to_supportFragment"
             app:destination="@id/supportFragment"
@@ -66,11 +76,21 @@
             android:defaultValue="1" />
 
     </fragment>
+
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.julie.learnnavigationcomponents.fragments.LocationFragment"
         android:label="fragment_location"
-        tools:layout="@layout/fragment_location" />
+        tools:layout="@layout/fragment_location">
+
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="1" />
+
+
+
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.julie.learnnavigationcomponents.fragments.ProfileFragment"

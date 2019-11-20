@@ -10,7 +10,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="enter amount to deals"
+        android:hint="send amount to deals(safe args)"
         android:gravity="center"
         android:id="@+id/editTextAmount"/>
 
@@ -20,6 +20,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Go to deals" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="send amount to location(bundles)"
+        android:gravity="center"
+        android:id="@+id/editAmountLocation"/>
+
     <Button
         android:id="@+id/location"
         android:layout_width="match_parent"
