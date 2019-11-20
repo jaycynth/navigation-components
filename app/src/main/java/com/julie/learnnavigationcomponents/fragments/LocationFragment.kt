@@ -28,7 +28,8 @@ class LocationFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val tv = view?.findViewById<TextView>(R.id.textViewAmountl)
-        val amount = arguments?.getString("amount")
-        tv?.text = amount
+        //val amount = arguments?.getString("amount")
+        val amount = arguments?.let { LocationFragmentArgs.fromBundle(it).amount }
+        tv?.text = amount.toString()
     }
 }
